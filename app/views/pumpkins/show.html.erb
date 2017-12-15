@@ -6,8 +6,11 @@
 </p>
 
 <p>
-  <strong>Carved:</strong>
-  <%= @pumpkin.carved %>
+  <% if @pumpkin.carved %>
+    I'm already carved!!
+  <% else %>
+    I will be your next project.
+  <% end %> 
 </p>
 
 <p>
