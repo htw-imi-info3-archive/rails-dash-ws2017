@@ -10,12 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171215100847) do
+ActiveRecord::Schema.define(version: 20180102121812) do
 
   create_table "customers", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "line_items", force: :cascade do |t|
+    t.integer "order_id"
+    t.integer "pumpkin_id"
+    t.decimal "amount"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["order_id"], name: "index_line_items_on_order_id"
+    t.index ["pumpkin_id"], name: "index_line_items_on_pumpkin_id"
   end
 
   create_table "orders", force: :cascade do |t|
