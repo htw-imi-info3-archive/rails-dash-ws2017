@@ -1,9 +1,38 @@
 <p id="notice"><%= notice %></p>
 
+This is an order.
+
 <p>
   <strong>Customer:</strong>
   <%= @order.customer %>
 </p>
+
+
+<table>
+  <thead>
+    <tr>
+      <th>Order</th>
+      <th ></th>
+      <th ></th>
+      <th ></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @line_items.each do |line_item| %>
+      <tr>
+        <td><%= line_item.amount %></td>
+        <%
+         # this is still an access to the db,
+         #we will change this tomorrow morning:
+         %>
+        <td><%= line_item.pumpkin.species %></td>
+        <td>preis...</td>
+        <td></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
 
 <%= link_to 'Edit', edit_order_path(@order) %> |
 <%= link_to 'Back', orders_path %>
