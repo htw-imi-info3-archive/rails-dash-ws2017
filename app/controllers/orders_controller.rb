@@ -11,7 +11,6 @@ class OrdersController < ApplicationController
   # GET /orders/1.json
   def show
     @line_items = @order.line_items
-    byebug
   end
 
   # GET /orders/new
