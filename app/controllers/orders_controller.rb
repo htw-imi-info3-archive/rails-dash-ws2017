@@ -10,7 +10,11 @@ class OrdersController < ApplicationController
   # GET /orders/1
   # GET /orders/1.json
   def show
-    @line_items = @order.line_items
+    line_items = @order.line_items.includes(:pumpkin)
+    @li_pumpkin_pairs = []
+    line_items.each do |line_item|
+      @li_pumpkin_pairs << [line_item, line_item.pumpkin]
+    end
   end
 
   # GET /orders/new
