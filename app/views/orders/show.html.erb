@@ -4,7 +4,7 @@ This is an order.
 
 <p>
   <strong>Customer:</strong>
-  <%= @order.customer %>
+  <%= @order.customer.name %>
 </p>
 
 
@@ -17,7 +17,12 @@ This is an order.
       <th ></th>
     </tr>
   </thead>
-
+  
+  <p>
+	<strong>Total : </strong>
+	<%= @order.total() %>
+  </p>
+	
   <tbody>
     <% @line_items.each do |line_item| %>
       <tr>
@@ -27,7 +32,7 @@ This is an order.
          #we will change this tomorrow morning:
          %>
         <td><%= line_item.pumpkin.species %></td>
-        <td>preis...</td>
+        <td><%= line_item.pumpkin.price %></td>
         <td></td>
       </tr>
     <% end %>
