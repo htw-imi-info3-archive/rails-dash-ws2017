@@ -1,2 +1,8 @@
 de:
   hello: "Hallo Welt"
+  layouts:
+    application:
+      app_name: Die HTW Anwendung
+  pumpkins:
+    index:
+      pumpkins: Kürbisse
