@@ -1,0 +1,1 @@
+p1 = Pumpkin.create(species: 'blue Hubbard', carved: true, size: 2, weight: 3, price: 8)
