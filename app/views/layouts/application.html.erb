@@ -4,13 +4,13 @@
     <title>HTW</title>
     <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag  'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
     <h1><%= t '.app_name' %></h1>
-    
+
     <%= link_to '[EN]', pumpkins_path(locale: 'en') %>
     <%= link_to '[DE]', pumpkins_path(locale: 'de') %>
     <%= yield %>
