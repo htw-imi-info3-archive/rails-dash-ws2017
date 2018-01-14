@@ -38,3 +38,9 @@ o4 = c4.orders.create
 o4.line_items.create(pumpkin: p6, amount: 5)
 o4.line_items.create(pumpkin: p7, amount: 1)
 o4.line_items.create(pumpkin: p8, amount: 20)
+
+
+
+o5 = c4.orders.create
+o5.line_items.create(pumpkin: p7, amount: 1)
+o5.line_items.create(pumpkin: p8, amount: 20)
