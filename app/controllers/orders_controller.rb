@@ -12,6 +12,8 @@ class OrdersController < ApplicationController
   def show
     line_items = @order.line_items.includes(:pumpkin)
     @li_pumpkin_pairs = line_items.map { |li| [li, li.pumpkin] }
+
+
   end
 
   # GET /orders/new
@@ -63,11 +65,16 @@ class OrdersController < ApplicationController
     end
   end
 
+
+
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_order
       @order = Order.find(params[:id])
     end
+
+
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def order_params
