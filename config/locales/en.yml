@@ -1,0 +1,8 @@
+en:
+  hello: "Hello world"
+  layouts:
+    application:
+      app_name: My HTW Application
+  pumpkins:
+    index:
+      pumpkins: Pumpkins
