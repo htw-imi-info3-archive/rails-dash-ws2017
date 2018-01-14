@@ -5,5 +5,33 @@
   <%= @customer.name %>
 </p>
 
+<h3>Orders</h3>
+<table>
+
+  <thead>
+    <tr>
+
+
+
+    </tr>
+  </thead>
+
+  <tbody>
+    <%var =0%>
+
+    <% @customer.orders.each do |order| %>
+      <tr>
+        <td><tr>Order </tr><%=var+=1%> <%=link_to "Show", order_path(order)%>
+
+          </td>
+
+      </tr>
+    <% end %> <br>
+    <br>
+    <tr> Total Amount of all Orders: <%= @customer.calcTotal%> </tr>
+
+  </tbody>
+</table>
+
 <%= link_to 'Edit', edit_customer_path(@customer) %> |
 <%= link_to 'Back', customers_path %>
