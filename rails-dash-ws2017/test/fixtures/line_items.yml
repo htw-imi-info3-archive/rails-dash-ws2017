@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  order: one
+  pumpkin: one
+  amount: 9.99
+
+two:
+  order: two
+  pumpkin: two
+  amount: 9.99

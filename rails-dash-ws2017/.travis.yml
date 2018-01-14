@@ -1,0 +1,4 @@
+language: ruby
+rvm:
+  - 2.4
+script: rake db:migrate db:seed RAILS_ENV=test

@@ -1,0 +1,22 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @customer.name %>
+  <br>
+  <strong>Total: </strong>
+  <%= @customer.total%>
+</p>
+<table>
+<tbody>
+  <% @customer.orders.each do |order| %>
+    <tr>
+      <td><%= order.id %></td>
+        <td><%= order.created_at %></td>
+      <td><%= link_to 'Show', order %></td>
+  <% end %>
+</tbody>
+</table>
+
+<%= link_to 'Edit', edit_customer_path(@customer) %> |
+<%= link_to 'Back', customers_path %>

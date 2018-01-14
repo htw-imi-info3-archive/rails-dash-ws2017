@@ -1,0 +1,42 @@
+<%= form_with(model: pumpkin, local: true) do |form| %>
+  <% if pumpkin.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(pumpkin.errors.count, "error") %> prohibited this pumpkin from being saved:</h2>
+
+      <ul>
+      <% pumpkin.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :species %>
+    <%= form.text_field :species, id: :pumpkin_species %>
+  </div>
+
+  <div class="field">
+    <%= form.label :carved %>
+    <%= form.check_box :carved, id: :pumpkin_carved %>
+  </div>
+
+  <div class="field">
+    <%= form.label :size %>
+    <%= form.text_field :size, id: :pumpkin_size %>
+  </div>
+
+  <div class="field">
+    <%= form.label :weight %>
+    <%= form.text_field :weight, id: :pumpkin_weight %>
+  </div>
+
+  <div class="field">
+    <%= form.label :price %>
+    <%= form.text_field :price, id: :pumpkin_price %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

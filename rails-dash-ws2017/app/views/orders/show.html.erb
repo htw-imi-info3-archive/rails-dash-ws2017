@@ -1,0 +1,38 @@
+<p id="notice"><%= notice %></p>
+
+This is an order.
+
+<p>
+  <strong>Customer:</strong>
+  <%= @order.customer.name %>
+  <br>
+    <strong>Total: </strong>
+    <%= @order.total %>
+</p>
+
+
+<table>
+  <thead>
+    <tr>
+      <th>Amount</th>
+      <th >Pumpkin</th>
+      <th >Price per Pumpkin</th>
+      <th >Price</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @li_pumpkin_pairs.each do |line_item,pumpkin| %>
+      <tr>
+        <td><%= line_item.amount %></td>
+        <td><%= pumpkin.species %></td>
+        <td><%= pumpkin.price %></td>
+        <td><%= line_item.price %></td>
+        <td></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to 'Edit', edit_order_path(@order) %> |
+<%= link_to 'Back', orders_path %>

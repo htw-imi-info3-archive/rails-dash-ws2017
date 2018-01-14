@@ -1,0 +1,32 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Species:</strong>
+  <%= @pumpkin.species %>
+</p>
+
+<p>
+  <% if @pumpkin.carved %>
+    I'm already carved!!
+  <% else %>
+    I will be your next project.
+  <% end %> 
+</p>
+
+<p>
+  <strong>Size:</strong>
+  <%= @pumpkin.size %>
+</p>
+
+<p>
+  <strong>Weight:</strong>
+  <%= @pumpkin.weight %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @pumpkin.price %>
+</p>
+
+<%= link_to 'Edit', edit_pumpkin_path(@pumpkin) %> |
+<%= link_to 'Back', pumpkins_path %>
