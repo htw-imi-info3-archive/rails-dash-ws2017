@@ -11,6 +11,7 @@ class CustomersController < ApplicationController
   # GET /customers/1.json
   def show
     @orders = @customer.orders
+    @all_orders_total = @orders.map(&:total).inject(&:+)
   end
 
   # GET /customers/new
