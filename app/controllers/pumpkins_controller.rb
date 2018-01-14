@@ -4,7 +4,7 @@ class PumpkinsController < ApplicationController
   # GET /pumpkins
   # GET /pumpkins.json
   def index
-    @pumpkins = Pumpkin.all
+    @pumpkins = Pumpkin.search(params[:search])
   end
 
   # GET /pumpkins/1

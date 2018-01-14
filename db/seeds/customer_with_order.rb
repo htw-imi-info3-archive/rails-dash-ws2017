@@ -20,7 +20,7 @@ o2.line_items.create(pumpkin: p14, amount: 2)
 o2.line_items.create(pumpkin: p15, amount: 10)
 
 
-c3 = Customer.create(name: 'Bat Man')
+c3 = Customer.create(name: 'Bat Mann')
 
 p12 = Pumpkin.create(species: "Field", carved: false, size: 18, weight: 20, price: 70)
 
@@ -29,7 +29,7 @@ o3.line_items.create(pumpkin: p12, amount: 1)
 
 
 
-c4 = Customer.create(name: 'Super Man')
+c4 = Customer.create(name: 'Super Mann')
 
 p6 = Pumpkin.create(species: "Spaghetti", carved: false, size: 7, weight: 6, price: 16)
 p7 = Pumpkin.create(species: "Sugar Pie", carved: false, size: 8, weight: 9, price: 18)
