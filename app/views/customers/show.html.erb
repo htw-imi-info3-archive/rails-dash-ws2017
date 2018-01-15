@@ -5,5 +5,21 @@
   <%= @customer.name %>
 </p>
 
+<strong>Orders:</strong>
+<table>
+  <tbody>
+    <% @customer.orders.each do |o| %>
+    <tr>
+       <td> <%= o.id %>  </td>
+       <td> <%= o.created_at %> </td>
+       <td> <%= link_to 'Show', o %> </td>
+    </tr>
+   <% end %>
+  <tr>
+    <td> Die Gesamtsumme: <%= @customer.gesamtsumme %></td>
+  </tr>
+ </tbody>
+
+<table>
 <%= link_to 'Edit', edit_customer_path(@customer) %> |
 <%= link_to 'Back', customers_path %>
