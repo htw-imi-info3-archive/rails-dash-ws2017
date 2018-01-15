@@ -4,7 +4,8 @@ This is an order.
 
 <p>
   <strong>Customer:</strong>
-  <%= @order.customer %>
+  <!-- statt order.customer einfach order.customer.name -->
+  <%= @order.customer.name %>
 </p>
 
 
@@ -19,7 +20,7 @@ This is an order.
   </thead>
 
   <tbody>
-    <% @li_pumpkin_pairs.each do |line_item,pumpkin| %>
+    <% @li_pumpkin_pairs.each do |line_item, pumpkin| %>
       <tr>
         <td><%= line_item.amount %></td>
         <td><%= pumpkin.species %></td>
@@ -28,8 +29,12 @@ This is an order.
         <td></td>
       </tr>
     <% end %>
+    <tr>
+    <td> Summe: <%= @order.insgesamt %></td>
+    </tr>
   </tbody>
 </table>
+
 
 <%= link_to 'Edit', edit_order_path(@order) %> |
 <%= link_to 'Back', orders_path %>
