@@ -4,9 +4,10 @@ This is an order.
 
 <p>
   <strong>Customer:</strong>
-  <%= @order.customer %>
+  <%= @order.customer.name %>
 </p>
 
+<p>Total price: <%= @order.total_price%></p>
 
 <table>
   <thead>
