@@ -1,8 +1,32 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Name:</strong>
+  <strong>Customer:</strong>
   <%= @customer.name %>
+</p>
+
+<table>
+  <thead>
+  <tr>
+    <th>Order ID:</th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% @customer.orders.each do |order| %>
+    <tr>
+      <td><%= order.__id__ %></td>
+      <td><%= link_to 'Show', order %></td>
+      <td><%= link_to 'Edit', edit_order_path(order) %></td>
+      <td><%= link_to 'Destroy', order, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+
+<p>
+  <strong>Total Sum:</strong>
+  <%= @customer.sumOrders %>
 </p>
 
 <%= link_to 'Edit', edit_customer_path(@customer) %> |
