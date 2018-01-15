@@ -11,6 +11,10 @@
 /db/*.sqlite3
 /db/*.sqlite3-journal
 
+# file: ~/.gitignore_global
+.DS_Store
+.idea
+
 # Ignore all logfiles and tempfiles.
 /log/*
 /tmp/*
