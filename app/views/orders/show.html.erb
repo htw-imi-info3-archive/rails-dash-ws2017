@@ -4,7 +4,7 @@ This is an order.
 
 <p>
   <strong>Customer:</strong>
-  <%= @order.customer %>
+  <%= @customer.name %>
 </p>
 
 
@@ -28,6 +28,12 @@ This is an order.
         <td></td>
       </tr>
     <% end %>
+    <tr>
+      <td colspan="2"></td>
+      <td><b>Total:</b></td>
+      <td><%= @order.total %></td>
+      <td></td>
+    </tr>
   </tbody>
 </table>
 
