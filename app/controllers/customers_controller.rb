@@ -4,7 +4,12 @@ class CustomersController < ApplicationController
   # GET /customers
   # GET /customers.json
   def index
+      sort = params[:sort_by]
+      if sort == "name"
+    @customers = Customer.order("name ASC")
+      else 
     @customers = Customer.all
+      end
   end
 
   # GET /customers/1
