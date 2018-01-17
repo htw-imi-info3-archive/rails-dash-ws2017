@@ -5,6 +5,7 @@ class OrdersController < ApplicationController
   # GET /orders.json
   def index
     @orders = Order.all
+    @order_customer_pairs = @orders.map { |o| [o, o.customer] }
   end
 
   # GET /orders/1
@@ -12,6 +13,7 @@ class OrdersController < ApplicationController
   def show
     line_items = @order.line_items.includes(:pumpkin)
     @li_pumpkin_pairs = line_items.map { |li| [li, li.pumpkin] }
+    @customer = @order.customer
   end
 
   # GET /orders/new

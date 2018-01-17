@@ -15,6 +15,7 @@ class PumpkinsController < ApplicationController
   # GET /pumpkins/1
   # GET /pumpkins/1.json
   def show
+    @comments = @pumpkin.comments
   end
 
   # GET /pumpkins/new

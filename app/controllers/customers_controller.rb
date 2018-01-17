@@ -4,12 +4,23 @@ class CustomersController < ApplicationController
   # GET /customers
   # GET /customers.json
   def index
-    @customers = Customer.all
+     sort_list = params[:sort_by]
+     if sort_list == "created_at" then sort_customers
+     else 
+     @customers = Customer.all
+     end
+  end
+
+#SORT customers by creation date
+  def sort_customers
+    @customers = Customer.order("created_at DESC")
   end
 
   # GET /customers/1
   # GET /customers/1.json
   def show
+    @orders = @customer.orders
+    @all_orders_total = @orders.map(&:total).inject(&:+)
   end
 
   # GET /customers/new

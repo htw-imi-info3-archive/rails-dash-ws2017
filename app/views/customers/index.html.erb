@@ -5,6 +5,9 @@
 
 <h1><%= t ".title"%></h1>
 
+<!--Link to sort list added-->
+<%= link_to 'Sort by creation date', customers_path(:sort_by => "created_at") %>
+
 <table>
   <thead>
     <tr>
