@@ -6,3 +6,11 @@ de:
   pumpkins:
     index:
       pumpkins: Kürbisse
+  orders:
+        index:
+          orders: Bestellungen
+          customer: Kunde
+          showx: Zeigen
+          editx: Bearbeiten
+          destroyx: Verwerfen
+          new_orderx: Neue Bestellung
