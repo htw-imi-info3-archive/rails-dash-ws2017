@@ -6,3 +6,11 @@ en:
   pumpkins:
     index:
       pumpkins: Pumpkins
+customers:
+  index:
+      title: Customers
+
+orders:
+  index:
+    title: Orders
+    customer: 

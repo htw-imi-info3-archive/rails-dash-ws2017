@@ -6,3 +6,11 @@ de:
   pumpkins:
     index:
       pumpkins: Kürbisse
+customers:
+  index:
+      title: Kunden
+
+orders:
+  index:
+    title: Bestellungen
+    customer: Kunde

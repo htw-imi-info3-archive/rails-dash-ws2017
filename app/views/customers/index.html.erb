@@ -1,6 +1,9 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Customers</h1>
+<%= link_to '[EN]', customers_path(locale: 'en') %>
+<%= link_to '[DE]', customers_path(locale: 'de') %>
+
+<h1><%= t ".title"%></h1>
 
 <table>
   <thead>

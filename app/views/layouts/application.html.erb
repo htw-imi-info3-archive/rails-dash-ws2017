@@ -10,9 +10,9 @@
 
   <body>
     <h1><%= t '.app_name' %></h1>
-    
-    <%= link_to '[EN]', pumpkins_path(locale: 'en') %>
-    <%= link_to '[DE]', pumpkins_path(locale: 'de') %>
+
+    <%= link_to '[EN]', locale: 'en' %>
+    <%= link_to '[DE]', locale: 'de' %>
     <%= yield %>
   </body>
 </html>
