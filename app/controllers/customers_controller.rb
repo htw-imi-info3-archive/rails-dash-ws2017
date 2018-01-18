@@ -4,7 +4,11 @@ class CustomersController < ApplicationController
   # GET /customers
   # GET /customers.json
   def index
+    sort_list = params[:sort]
+    if sort_list == "by_creation" then sort_customers
+    else 
     @customers = Customer.all
+  end
   end
 
   # GET /customers/1
@@ -62,6 +66,11 @@ class CustomersController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+# SORT customer names by creation date
+  def sort_customers
+    @customers = Customer.order("created_at DESC")
+  end 
 
   private
     # Use callbacks to share common setup or constraints between actions.
