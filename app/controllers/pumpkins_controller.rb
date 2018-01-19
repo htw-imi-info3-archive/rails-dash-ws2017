@@ -47,13 +47,6 @@ class PumpkinsController < ApplicationController
     end
   end
 
-  def convert
-    respond_to do |format|
-      format.html { render :edit }
-      format.json { render json: @pumpkin.errors, status: :unprocessable_entity }
-    end
-  end
-
   # PATCH/PUT /pumpkins/1
   # PATCH/PUT /pumpkins/1.json
   def update
