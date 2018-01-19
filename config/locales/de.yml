@@ -3,6 +3,29 @@ de:
   layouts:
     application:
       app_name: Die HTW Anwendung
+  startpage:
+    welcome:
+      i_welcome: Willkommen!
   pumpkins:
     index:
       pumpkins: Kürbisse
+  orders:
+        index:
+          orders: Bestellungen
+          customer: Kunde
+          showx: Zeigen
+          editx: Bearbeiten
+          destroyx: Verwerfen
+          new_orderx: Neue Bestellung
+    show:
+      i_spiecies: Sorte
+      i_size: Größe
+      i_weight: Gewicht
+      i_price: Preis
+      i_comment: Kommentare
+      i_title: Title
+      i_content: Inhalt
+      i_edit: bearbeiten
+      i_back: Zurück
+      i_carved: Ich bin bereits geschnitzt!!
+      i_next: Ich werde dein nächstes Projekt sein.
