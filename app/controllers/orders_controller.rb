@@ -1,5 +1,5 @@
 class OrdersController < ApplicationController
-  before_action :set_locale, :set_order, only: [:show, :edit, :update, :destroy]
+  before_action :set_order, only: [:show, :edit, :update, :destroy]
 
   # GET /orders
   # GET /orders.json
@@ -7,17 +7,6 @@ class OrdersController < ApplicationController
     @orders = Order.all
     @order_customer_pairs = @orders.map { |o| [o, o.customer] }
   end
-
-#sets locale
-  def set_locale
-  I18n.locale = extract_locale_from_subdomain || I18n.locale = params[:locale] || I18n.default_locale
-  end
-
-#extracts locale from possible subdomains
-  def extract_locale_from_subdomain
-  parsed_locale = request.subdomains.first
-  I18n.available_locales.map(&:to_s).include?(parsed_locale) ? parsed_locale : nil
-end
 
   # GET /orders/1
   # GET /orders/1.json

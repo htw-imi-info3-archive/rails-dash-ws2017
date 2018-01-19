@@ -4,7 +4,6 @@ Rails.application.routes.draw do
     resources :orders
     resources :customers
     resources :pumpkins
-    resources :comments
     root to: 'startpage#welcome'
     # For details on the DSL available
     # within this file,
