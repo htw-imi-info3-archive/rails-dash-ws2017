@@ -9,14 +9,6 @@ en:
   pumpkins:
     index:
       pumpkins: Pumpkins
-  orders:
-    index:
-      orders: Orders
-      customer: Customer
-      showx: Show
-      editx: Edit
-      destroyx: Destroy
-      new_orderx: New Order
     show:
       i_spiecies: Species
       i_size: Size
