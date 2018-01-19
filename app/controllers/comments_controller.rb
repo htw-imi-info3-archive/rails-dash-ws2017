@@ -7,7 +7,6 @@ class CommentsController < ApplicationController
     @comments = Comment.search(params[:search])
 
 
-
   end
 
   # GET /comments/1
