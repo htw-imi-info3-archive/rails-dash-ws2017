@@ -4,6 +4,7 @@ class PumpkinsController < ApplicationController
   # GET /pumpkins
   # GET /pumpkins.json
   def index
+
     sorted = params[:sort]
     if(sorted=="yes")
       @pumpkins = Pumpkin.order(:species)
@@ -14,12 +15,15 @@ class PumpkinsController < ApplicationController
 
   def ordered
     @pumpkinsOrdered = Pumpkin.order(:species)
+
   end
 
   # GET /pumpkins/1
   # GET /pumpkins/1.json
   def show
     @comments = @pumpkin.comments
+
+
   end
 
   # GET /pumpkins/new

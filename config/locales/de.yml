@@ -9,6 +9,7 @@ de:
   pumpkins:
     index:
       pumpkins: Kürbisse
+
     show:
       i_spiecies: Sorte
       i_size: Größe
@@ -21,3 +22,4 @@ de:
       i_back: Zurück
       i_carved: Ich bin bereits geschnitzt!!
       i_next: Ich werde dein nächstes Projekt sein.
+
