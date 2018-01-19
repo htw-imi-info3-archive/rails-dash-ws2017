@@ -2,15 +2,16 @@
 
 <h1><%=t '.pumpkins'%></h1>
 
+
 locale: <%= params[:locale] %>
 <table>
   <thead>
     <tr>
       <th>Species</th>
       <th>Carved</th>
-      <th >Size</th>
-      <th >Weight</th>
-      <th >Price</th>
+      <th>Size</th>
+      <th>Weight</th>
+      <th>Price</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -20,33 +21,9 @@ locale: <%= params[:locale] %>
       <tr>
         <td><%= pumpkin.species %></td>
         <td><%= pumpkin.carved %></td>
-
-        <td><% if locale == :en && pumpkin.size!=nil %>
-              <%= pumpkin.size_inch %>
-            <% else %>
-              <%= pumpkin.size%>
-          <% end %>
-        </td>
-        <td><% if locale == :en && pumpkin.weight!=nil %>
-              <%= pumpkin.weight_lbs %>
-            <% else %>
-              <%= pumpkin.weight%>
-          <% end %>
-        </td>
-        <td><% if locale == :en %>
-              <%= pumpkin.price_dollar %>
-            <% end %>
-            <% if locale == :ru%>
-              <%= pumpkin.price_rubel%>
-            <% end %>
-            <% if locale == :jp%>
-              <%= pumpkin.price_yen%>
-            <% end %>
-            <% if locale == :de%>
-              <%= pumpkin.price%>
-          <% end %>
-        </td>
-
+        <td><%= pumpkin.size %></td>
+        <td><%= pumpkin.weight %></td>
+        <td><%= pumpkin.price %></td>
         <td><%= link_to 'Show', pumpkin %></td>
         <td><%= link_to 'Edit', edit_pumpkin_path(pumpkin) %></td>
         <td><%= link_to 'Destroy', pumpkin, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -54,6 +31,8 @@ locale: <%= params[:locale] %>
     <% end %>
   </tbody>
 </table>
+
 <br>
+
 <%= link_to 'New Pumpkin', new_pumpkin_path %>
 <%= link_to 'Ordered List', pumpkins_path(:sort => "yes") %>
