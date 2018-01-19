@@ -1,10 +1,11 @@
 <p id="notice"><%= notice %></p>
 
-<h1><%= t ".orders" %></h1>
+<h1><%=t ".title"%></h1>
+
 <table>
   <thead>
     <tr>
-      <th><%= t '.customer'%></th>
+      <th><%= t ".customer"%></th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -13,9 +14,9 @@
     <% @order_customer_pairs.each do | order, customer | %>
       <tr>
         <td><%= customer.name %></td>
-        <td><%=link_to t('.showx'),  order%></td>
-        <td><%= link_to t('.editx'), edit_order_path(order) %></td>
-        <td><%= link_to t('.destroyx'), order, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', order %></td>
+        <td><%= link_to 'Edit', edit_order_path(order) %></td>
+        <td><%= link_to 'Destroy', order, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -23,4 +24,4 @@
 
 <br>
 
-<%= link_to t('.new_orderx'), new_order_path %>
+<%= link_to 'New Order', new_order_path %>

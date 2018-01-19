@@ -9,14 +9,7 @@ en:
   pumpkins:
     index:
       pumpkins: Pumpkins
-  orders:
-    index:
-      orders: Orders
-      customer: Customer
-      showx: Show
-      editx: Edit
-      destroyx: Destroy
-      new_orderx: New Order
+
     show:
       i_spiecies: Species
       i_size: Size
@@ -29,3 +22,4 @@ en:
       i_back: Back
       i_carved: I'm already carved!!
       i_next: I will be your next project.
+
