@@ -12,7 +12,12 @@
 
 <p>
   <strong>Pumpkin:</strong>
-  <%= @comment.pumpkin %>
+  <%= @comment.pumpkin.species %>
+</p>
+
+<p>
+  <strong>Created at:</strong>
+  <%= @comment.created_at %>
 </p>
 
 <%= link_to 'Edit', edit_comment_path(@comment) %> |
