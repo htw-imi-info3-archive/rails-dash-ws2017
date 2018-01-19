@@ -4,18 +4,17 @@ class PumpkinsController < ApplicationController
   # GET /pumpkins
   # GET /pumpkins.json
   def index
-<<<<<<< Updated upstream
+
     @pumpkins = Pumpkin.all
-=======
-    @pumpkins = Pumpkin.search(params[:search])
-    @pumpkins = Pumpkin.order(params[:sort])
->>>>>>> Stashed changes
+
   end
 
   # GET /pumpkins/1
   # GET /pumpkins/1.json
   def show
     @comments = @pumpkin.comments
+
+
   end
 
   # GET /pumpkins/new

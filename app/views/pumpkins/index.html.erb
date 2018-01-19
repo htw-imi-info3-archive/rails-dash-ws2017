@@ -2,26 +2,16 @@
 
 <h1><%=t '.pumpkins'%></h1>
 
-<<<<<<< Updated upstream
-=======
 
-
-<%=form_tag pumpkins_path, :method => 'get' do%>
-<%= text_field_tag :search, params[:search] %>
-<%= submit_tag "Search for Pumpkin Species" %>
-<% end%>
-<p>Click on the column heads to sort the pumpkins by species, size, weight and price.</p>
-
->>>>>>> Stashed changes
 locale: <%= params[:locale] %>
 <table>
   <thead>
     <tr>
-      <th><%= link_to "Species", :sort => "species" %></th>
+      <th>Species</th>
       <th>Carved</th>
-      <th><%= link_to "Size", :sort => "size"%></th>
-      <th><%= link_to "Weight", :sort => "weight"%></th>
-      <th><%= link_to "Price", :sort => "price"%></th>
+      <th>Size</th>
+      <th>Weight</th>
+      <th>Price</th>
       <th colspan="3"></th>
     </tr>
   </thead>
