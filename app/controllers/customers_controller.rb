@@ -7,7 +7,7 @@ class CustomersController < ApplicationController
     sort_list = params[:sort]
     if sort_list == "by_creation" then sort_customers
     else 
-    @customers = Customer.all
+    @customers = Customer.search(params[:search])
   end
   end
 
@@ -70,7 +70,7 @@ class CustomersController < ApplicationController
 # SORT customer names by creation date
   def sort_customers
     @customers = Customer.order("created_at DESC")
-  end 
+  end
 
   private
     # Use callbacks to share common setup or constraints between actions.
