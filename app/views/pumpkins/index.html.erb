@@ -19,7 +19,8 @@ locale: <%= params[:locale] %>
     <% @pumpkins.each do |pumpkin| %>
       <tr>
         <td><%= pumpkin.species %></td>
-        <td><%= pumpkin.carved %></td>
+        <td><%= pumpkin.is_carved %>
+        </td>
 
         <td><% if locale == :en && pumpkin.size!=nil %>
               <%= pumpkin.size_inch %>
