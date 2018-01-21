@@ -9,6 +9,8 @@ de:
   pumpkins:
     index:
       pumpkins: Kürbisse
+      yes: Ja
+      no: Nein
   orders:
     index:
       orders: Bestellungen

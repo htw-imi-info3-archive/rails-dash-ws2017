@@ -27,4 +27,11 @@ class Pumpkin < ApplicationRecord
     self.weight  ||= 0.0
     weight*2.204
   end
+  def is_carved
+    if self.carved == true
+      return 'yes'
+    else
+      return 'no'
+    end
+  end
 end

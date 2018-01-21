@@ -9,6 +9,8 @@ en:
   pumpkins:
     index:
       pumpkins: Pumpkins
+      yes: Yes
+      no: No
   orders:
     index:
       orders: Orders
