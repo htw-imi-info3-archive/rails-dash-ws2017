@@ -11,6 +11,10 @@ class Pumpkin < ApplicationRecord
     self.price ||= 0.0
     price*135.380
   end
+  def price_sek
+    self.price  ||= 0.0
+    price*9.83
+  end
   def price_rubel
     self.price  ||= 0.0
     price*69.351
