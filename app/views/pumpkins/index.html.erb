@@ -44,7 +44,10 @@ locale: <%= params[:locale] %>
             <% end %>
             <% if locale == :de%>
               <%= pumpkin.price%>
-          <% end %>
+            <% end %>
+            <% if locale == :sv%>
+              <%= pumpkin.price_sek%>
+            <% end %>
         </td>
 
         <td><%= link_to 'Show', pumpkin %></td>
