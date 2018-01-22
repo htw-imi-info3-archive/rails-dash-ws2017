@@ -34,3 +34,10 @@ locale: <%= params[:locale] %>
 <br>
 
 <%= link_to 'New Pumpkin', new_pumpkin_path %>
+
+
+<%= form_tag("/pumpkins", method: "get") do %>
+  <%= label_tag(:pumpkinName, "Search for:") %>
+  <%= text_field_tag(:pumpkinName) %>
+  <%= submit_tag("Search") %>
+<% end %>

@@ -5,6 +5,9 @@ class PumpkinsController < ApplicationController
   # GET /pumpkins.json
   def index
     @pumpkins = Pumpkin.all
+      if params["pumpkinName"] 
+          @pumpkins.searchPumpkin(params["pumpkinName"])
+    end
   end
 
   # GET /pumpkins/1
