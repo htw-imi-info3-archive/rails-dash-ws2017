@@ -9,6 +9,7 @@ sv:
   pumpkins:
     index:
       pumpkins: Pumpor
+      i_species: Art
   orders:
     index:
       orders: Beställningar
@@ -18,7 +19,7 @@ sv:
       destroyx: Radera
       new_orderx: Ny Beställning
     show:
-      i_spiecies: Art
+      i_species: Art
       i_size: Storlek
       i_weight: Vikt
       i_price: Pris

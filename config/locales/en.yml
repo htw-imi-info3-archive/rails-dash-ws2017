@@ -9,6 +9,7 @@ en:
   pumpkins:
     index:
       pumpkins: Pumpkins
+      i_species: Species
       yes: Yes
       no: No
   orders:
@@ -20,7 +21,7 @@ en:
       destroyx: Destroy
       new_orderx: New Order
     show:
-      i_spiecies: Species
+      i_species: Species
       i_size: Size
       i_weight: Weight
       i_price: Price

@@ -9,6 +9,7 @@ de:
   pumpkins:
     index:
       pumpkins: Kürbisse
+      i_species: Sorte
       yes: Ja
       no: Nein
   orders:
@@ -20,7 +21,7 @@ de:
       destroyx: Verwerfen
       new_orderx: Neue Bestellung
     show:
-      i_spiecies: Sorte
+      i_species: Sorte
       i_size: Größe
       i_weight: Gewicht
       i_price: Preis

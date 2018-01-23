@@ -9,6 +9,7 @@ jp:
   pumpkins:
     index:
       pumpkins: かぼちゃ
+      i_species: 種類
 #not japanese, has to be changed!
   orders:
     index:
@@ -19,7 +20,7 @@ jp:
       destroyx: Verwerfen
       new_orderx: Neue Bestellung
     show:
-      i_spiecies: 種類
+      i_species: 種類
       i_size: 大きさ
       i_weight: 重さ
       i_price: 値段
