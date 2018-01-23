@@ -1,0 +1,8 @@
+sv:
+  hello: "Hallå värld"
+  layouts:
+    application:
+      app_name: HTW Applikationen
+  pumpkins:
+    index:
+      pumpkins: Pumpor
