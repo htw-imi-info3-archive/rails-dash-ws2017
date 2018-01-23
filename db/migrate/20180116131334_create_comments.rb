@@ -4,6 +4,7 @@ class CreateComments < ActiveRecord::Migration[5.1]
       t.string :title
       t.text :content
       t.references :pumpkin, foreign_key: true
+
       t.timestamps
     end
   end
