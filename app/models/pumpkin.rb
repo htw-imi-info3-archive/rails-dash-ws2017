@@ -7,4 +7,5 @@ class Pumpkin < ApplicationRecord
     Pumpkin.find_by_sql("SELECT * FROM pumpkins
   WHERE name = p")
     end
+    
 end

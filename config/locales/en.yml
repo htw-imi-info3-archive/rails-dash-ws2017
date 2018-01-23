@@ -6,3 +6,15 @@ en:
   pumpkins:
     index:
       pumpkins: Pumpkins
+      species: Species
+      carved: Carved
+      size: Size
+      weight: Weight
+      price: Price
+      show: Show
+      edit: Edit
+      delete: Delete
+      new: New Pumpkin
+      search: Search
+      search_for: Search for
+

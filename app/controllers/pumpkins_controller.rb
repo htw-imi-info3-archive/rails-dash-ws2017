@@ -6,8 +6,28 @@ class PumpkinsController < ApplicationController
   def index
     @pumpkins = Pumpkin.all
       if params["pumpkinName"] 
-          @pumpkins.searchPumpkin(params["pumpkinName"])
+          Pumpkin.all.searchPumpkin(params["pumpkinName"])
     end
+      
+        @show = t '.show'
+        @edit = t '.edit'
+        @delete = t '.delete'
+        @new = t '.new'
+        @search_for = t'.search_for'
+      
+        flash[:species] = t 'species'
+        flash[:carved] = t 'carved'
+        flash[:size] = t 'size'
+        flash[:weight] = t 'weight'
+        flash[:price] = t 'price'
+        flash[:show] = t 'show'
+        flash[:edit] = t 'edit'
+        flash[:delete] = t 'delete'
+        flash[:new] = t 'new'
+        flash[:search] = t 'search'
+        flash[:search_for] = t 'search_for'
+      
+      
   end
 
   # GET /pumpkins/1
