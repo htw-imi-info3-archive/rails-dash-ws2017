@@ -1,45 +1,48 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Species:</strong>
+  <strong><%= t '.i_spiecies' %>:</strong>
+
+
   <%= @pumpkin.species %>
 </p>
 
 <p>
   <% if @pumpkin.carved %>
-    I'm already carved!!
+    <%= t '.i_carved' %>
   <% else %>
-    I will be your next project.
+        <%= t '.i_next' %>
   <% end %>
 </p>
 
 <p>
-  <strong>Size:</strong>
+  <strong><%= t '.i_size' %> : </strong>
   <%= @pumpkin.size %>
 </p>
 
 <p>
-  <strong>Weight:</strong>
+  <strong><%= t '.i_weight' %>:</strong>
   <%= @pumpkin.weight %>
 </p>
 
 <p>
-  <strong>Price:</strong>
+  <strong><%= t '.i_price' %>:</strong>
   <%= @pumpkin.price %>
 </p>
+
 
 <%= link_to 'Edit', edit_pumpkin_path(@pumpkin) %> |
 <%= link_to 'Back', pumpkins_path %>
 
 
 
-<h1>Comments</h1>
+<h1><%= t '.i_comment' %></h1>
 
 <table>
   <thead>
     <tr>
-      <th>Title</th>
-      <th>Content</th>
+      <th><%= t '.i_title' %></th>
+      <th><%= t '.i_content' %></th>
       <th colspan="3"></th>
     </tr>
   </thead>

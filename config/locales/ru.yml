@@ -1,0 +1,34 @@
+ru:
+  hello: Здравствуй, мир
+  layouts:
+    application:
+      app_name: Моё приложение "ХТВ"
+  pumpkins:
+    index:
+      i_species: Виды
+      pumpkins: Тыквы
+      yes: Да
+      no: Нет
+  orders:
+    index:
+      orders: Список заказов
+      customer: Клиент
+      showx: Показать
+      editx: Редактировать
+      destroyx: Удалить
+      new_orderx: Новый заказ
+    show:
+      i_species: Виды
+      i_carved: Узор
+      i_size: Размер
+      i_weight: Вес
+      i_price: Цена
+      i_comment: Коментарии
+      i_titel: Название
+      i_content: Описание
+      i_edit: Редактировать
+      i_back: Назад
+      i_next: След. проект
+  startpage:
+    welcome:
+      i_welcome: Приветствуем!

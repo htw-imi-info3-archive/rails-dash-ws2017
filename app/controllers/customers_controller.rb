@@ -4,7 +4,11 @@ class CustomersController < ApplicationController
   # GET /customers
   # GET /customers.json
   def index
-    @customers = Customer.all
+    sort_list = params[:sort]
+    if sort_list == "by_creation" then sort_customers
+    else 
+    @customers = Customer.search(params[:search])
+  end
   end
 
   # GET /customers/1
@@ -61,6 +65,11 @@ class CustomersController < ApplicationController
       format.html { redirect_to customers_url, notice: 'Customer was successfully destroyed.' }
       format.json { head :no_content }
     end
+  end
+
+# SORT customer names by creation date
+  def sort_customers
+    @customers = Customer.order("created_at DESC")
   end
 
   private

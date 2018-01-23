@@ -3,6 +3,32 @@ en:
   layouts:
     application:
       app_name: My HTW Application
+  startpage:
+    welcome:
+      i_welcome: Welcome!
   pumpkins:
     index:
       pumpkins: Pumpkins
+      i_species: Species
+      yes: Yes
+      no: No
+  orders:
+    index:
+      orders: Orders
+      customer: Customer
+      showx: Show
+      editx: Edit
+      destroyx: Destroy
+      new_orderx: New Order
+    show:
+      i_species: Species
+      i_size: Size
+      i_weight: Weight
+      i_price: Price
+      i_comment: Comments
+      i_title: Titel
+      i_content: Contens
+      i_edit: Edit
+      i_back: Back
+      i_carved: I'm already carved!!
+      i_next: I will be your next project.

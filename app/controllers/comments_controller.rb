@@ -4,7 +4,7 @@ class CommentsController < ApplicationController
   # GET /comments
   # GET /comments.json
   def index
-    @comments = Comment.all
+       @comments = Comment.search(params[:search])
   end
 
   # GET /comments/1
