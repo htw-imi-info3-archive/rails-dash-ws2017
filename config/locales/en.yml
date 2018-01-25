@@ -6,3 +6,9 @@ en:
   pumpkins:
     index:
       pumpkins: Pumpkins
+      i_species: species
+      i_carved: carved
+      i_size: size
+      i_weight: weight
+      i_price: price
+

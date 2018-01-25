@@ -6,3 +6,8 @@ de:
   pumpkins:
     index:
       pumpkins: Kürbisse
+      i_species: Art
+      i_carved: geschnitten
+      i_size: Größe
+      i_weight: Gewicht
+      i_price: Preis
