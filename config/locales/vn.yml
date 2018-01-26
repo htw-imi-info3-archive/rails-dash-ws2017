@@ -1,0 +1,13 @@
+vn:
+  hello: "Xin Chao!"
+  layouts:
+    application:
+      app_name: Ung Dung HTW
+  pumpkins:
+    index:
+      pumpkins: Bi Ngo
+      i_species: Loai
+      i_size: Kich Thuoc
+      i_weight: Can Nang
+      i_price: Gia
+      i_carved: Trang Tri
