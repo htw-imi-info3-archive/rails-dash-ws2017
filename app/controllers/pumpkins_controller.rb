@@ -4,17 +4,28 @@ class PumpkinsController < ApplicationController
   # GET /pumpkins
   # GET /pumpkins.json
   def index
-    @pumpkins = Pumpkin.all
-      if params["pumpkinName"] 
+    sorted = params[:sort]
+    if(sorted == "yes")
+      @pumpkins = Pumpkin.order(:species)
+    else
+      @pumpkins = Pumpkin.all
+    end
+  
+
+  def Ordered
+    @pumpkinsOrdered = Pumpkin.order(:species)
+  end
+
+      if params["pumpkinName"]
           Pumpkin.all.searchPumpkin(params["pumpkinName"])
     end
-      
+
         @show = t '.show'
         @edit = t '.edit'
         @delete = t '.delete'
         @new = t '.new'
         @search_for = t'.search_for'
-      
+
         flash[:species] = t 'species'
         flash[:carved] = t 'carved'
         flash[:size] = t 'size'
@@ -26,8 +37,8 @@ class PumpkinsController < ApplicationController
         flash[:new] = t 'new'
         flash[:search] = t 'search'
         flash[:search_for] = t 'search_for'
-      
-      
+
+
   end
 
   # GET /pumpkins/1

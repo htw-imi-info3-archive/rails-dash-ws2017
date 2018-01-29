@@ -1,0 +1,19 @@
+vn:
+  hello: "Xin Chao!"
+  layouts:
+    application:
+      app_name: Ung Dung HTW
+  pumpkins:
+    index:
+      pumpkins: Bi Ngo
+      i_species: Loai
+      i_size: Kich Thuoc
+      i_weight: Can Nang
+      i_price: Gia
+      i_carved: Trang Tri
+      show: Xem
+      edit: Chinh Sua
+      delete: Xoa
+      new: Them moi
+      search: Tim Kiem
+      search_for: Tim Kiem
