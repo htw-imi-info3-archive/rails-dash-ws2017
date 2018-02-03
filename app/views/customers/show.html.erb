@@ -1,9 +1,29 @@
 <p id="notice"><%= notice %></p>
-
+<h1>Customer</h1>
 <p>
   <strong>Name:</strong>
   <%= @customer.name %>
 </p>
+<h2>Orders for <%= @customer.name %></h2>
+<table>
+  <thead>
+    <tr>
+      <th>Order Date</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
 
+  <tbody>
+    <% @orders.each do | order | %>
+      <tr>
+        <td><%= order.created_at %></td>
+        <td><%= link_to 'Show', order %></td>
+        <td><%= link_to 'Edit', edit_order_path(order) %></td>
+        <td><%= link_to 'Destroy', order, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<p><b>All Orders Total: <%= @all_orders_total %></b></p>
 <%= link_to 'Edit', edit_customer_path(@customer) %> |
 <%= link_to 'Back', customers_path %>

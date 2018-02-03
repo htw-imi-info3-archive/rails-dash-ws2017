@@ -6,26 +6,28 @@ locale: <%= params[:locale] %>
 <table>
   <thead>
     <tr>
-      <th>Species</th>
-      <th>Carved</th>
-      <th>Size</th>
-      <th>Weight</th>
-      <th>Price</th>
+      <th><%=t '.species' %></th>
+      <th><%=t '.carved' %></th>
+      <th><%=t '.size' %></th>
+      <th><%=t '.weight' %></th>
+      <th><%=t '.price' %></th>
       <th colspan="3"></th>
     </tr>
   </thead>
 
   <tbody>
+      
     <% @pumpkins.each do |pumpkin| %>
       <tr>
-        <td><%= pumpkin.species %></td>
+        <td><%= link_to pumpkin.species, pumpkin %></td>
         <td><%= pumpkin.carved %></td>
         <td><%= pumpkin.size %></td>
         <td><%= pumpkin.weight %></td>
         <td><%= pumpkin.price %></td>
-        <td><%= link_to 'Show', pumpkin %></td>
-        <td><%= link_to 'Edit', edit_pumpkin_path(pumpkin) %></td>
-        <td><%= link_to 'Destroy', pumpkin, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          
+        <td><%= link_to @show, pumpkin %></td>
+        <td><%= link_to @edit, edit_pumpkin_path(pumpkin) %></td>
+        <td><%= link_to @delete, pumpkin, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -33,4 +35,11 @@ locale: <%= params[:locale] %>
 
 <br>
 
-<%= link_to 'New Pumpkin', new_pumpkin_path %>
+<%= link_to @new, new_pumpkin_path %>
+
+
+<%= form_tag("/pumpkins", method: "get") do %>
+  <%= label_tag(:pumpkinName, @search_for) %>
+  <%= text_field_tag(:pumpkinName) %>
+  <%= submit_tag(t '.search') %>
+<% end %>

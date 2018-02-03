@@ -3,4 +3,9 @@ class Order < ApplicationRecord
   has_many :line_items
   has_many :pumpkins, through: :line_items
   # has_many(:pumpkins, {through: :line_items})
+
+  def total
+    line_items.collect(&:price).inject(&:+).to_f
+  end
+    
 end

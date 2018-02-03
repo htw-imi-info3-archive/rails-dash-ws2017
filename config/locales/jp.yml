@@ -1,0 +1,32 @@
+jp:
+  hello: "ハロー・ワールド"
+  layouts:
+    application:
+      app_name: HTW アプリケーション
+  startpage:
+    welcome:
+      i_welcome: ようこそ！
+  pumpkins:
+    index:
+      pumpkins: かぼちゃ
+#not japanese, has to be changed!
+  orders:
+    index:
+      orders: Bestellungen
+      customer: Kunde
+      showx: Zeigen
+      editx: Bearbeiten
+      destroyx: Verwerfen
+      new_orderx: Neue Bestellung
+    show:
+      i_spiecies: 種類
+      i_size: 大きさ
+      i_weight: 重さ
+      i_price: 値段
+      i_comment: コメント
+      i_title: タイトル
+      i_content: 内容
+      i_edit: 編集
+      i_back: 戻る
+      i_carved: もう彫刻してもらったよ！
+      i_next: 次はぼくの番だよ
