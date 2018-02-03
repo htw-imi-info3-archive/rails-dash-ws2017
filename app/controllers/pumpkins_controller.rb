@@ -2,11 +2,16 @@ class PumpkinsController < ApplicationController
   before_action :set_pumpkin, only: [:show, :edit, :update, :destroy]
 
   # GET /pumpkins
-  # GET /pumpkins.json
-  def index
-    @pumpkins = Pumpkin.all
-  end
-
+  # GET /pumpkins.json   
+    def index
+        @pumpkins = Pumpkin.all
+        if params[:search]
+        @pumpkins = Pumpkin.search(params[:search])
+        else
+        @pumpkins = Pumpkin.all
+        end
+    end
+    
   # GET /pumpkins/1
   # GET /pumpkins/1.json
   def show

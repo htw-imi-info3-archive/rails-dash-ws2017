@@ -16,6 +16,12 @@ locale: <%= params[:locale] %>
   </thead>
 
   <tbody>
+      
+      <%= form_tag(pumpkins_path,:method => 'get', id: "search-form") do %>
+        <%= text_field_tag :search, params[:search], placeholder: "Carved true or false?" %>
+        <%= submit_tag "Search", :name => nil %>
+      <% end %>
+      
     <% @pumpkins.each do |pumpkin| %>
       <tr>
         <td><%= pumpkin.species %></td>
