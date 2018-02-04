@@ -1,0 +1,31 @@
+sv:
+  hello: "Hej Världen!"
+  layouts:
+    application:
+      app_name: Min HTW App
+  startpage:
+    welcome:
+      i_welcome: Välkomna!
+  pumpkins:
+    index:
+      pumpkins: Pumpor
+  orders:
+    index:
+      orders: Beställningar
+      customer: Kunder
+      showx: Visa
+      editx: Redigera
+      destroyx: Radera
+      new_orderx: Ny Beställning
+    show:
+      i_spiecies: Art
+      i_size: Storlek
+      i_weight: Vikt
+      i_price: Pris
+      i_comment: Kommentarer
+      i_title: Titel
+      i_content: Innehåll
+      i_edit: Redigera
+      i_back: Tillbaka
+      i_carved: Jag är redan utskuren!!
+      i_next: Jag ska bli ditt nästa projekt.

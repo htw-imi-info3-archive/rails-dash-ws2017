@@ -16,4 +16,5 @@ class Order < ApplicationRecord
   def total
     line_items.collect(&:price).inject(&:+).to_f
   end
+    
 end
