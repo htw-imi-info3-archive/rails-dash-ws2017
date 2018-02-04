@@ -13,6 +13,8 @@ class PumpkinsController < ApplicationController
       
      
       
+
+      
         @show = t '.show'
         @edit = t '.edit'
         @delete = t '.delete'
@@ -31,7 +33,9 @@ class PumpkinsController < ApplicationController
         flash[:search] = t 'search'
         flash[:search_for] = t 'search_for'
       
+
         @pumpkins=@pumpkins.order(:species)
+
       
   end
 

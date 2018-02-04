@@ -17,7 +17,11 @@
       <tr>
         <td><%= comment.title %></td>
         <td><%= comment.content %></td>
+<<<<<<< HEAD
         <td><%= comment.pumpkin.species %></td>
+=======
+        <td><%= comment.pumpkin %></td>
+>>>>>>> c45889e1786253eca09b3b9c135621eb95a117f2
         <td><%= link_to 'Show', comment %></td>
         <td><%= link_to 'Edit', edit_comment_path(comment) %></td>
         <td><%= link_to 'Destroy', comment, method: :delete, data: { confirm: 'Are you sure?' } %></td>

@@ -18,6 +18,7 @@ en:
       search: Search
       search_for: Search for
 
+
     show:
       pumpkins: Pumpkins
       species: Species
@@ -32,3 +33,4 @@ en:
       content: Content
       comments: Comments
       back: Back
+
