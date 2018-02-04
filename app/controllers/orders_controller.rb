@@ -4,8 +4,12 @@ class OrdersController < ApplicationController
   # GET /orders
   # GET /orders.json
   def index
+    if params[:term]
+    @orders = Order.search(params[:term])
+    else
     @orders = Order.all
     @order_customer_pairs = @orders.map { |o| [o, o.customer] }
+    end
   end
 
   # GET /orders/1
