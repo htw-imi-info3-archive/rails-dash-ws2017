@@ -1,0 +1,58 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong><%=t '.species'%></strong>
+  <%= @pumpkin.species %>
+</p>
+
+<p>
+  <% if @pumpkin.carved %>
+    I'm already carved!!
+  <% else %>
+    I will be your next project.
+  <% end %>
+</p>
+
+<p>
+  <strong><%=t '.size'%></strong>
+  <%= @pumpkin.size %>
+</p>
+
+<p>
+  <strong><%=t '.weight'%></strong>
+  <%= @pumpkin.weight %>
+</p>
+
+<p>
+  <strong><%=t '.price'%></strong>
+  <%= @pumpkin.price %>
+</p>
+
+<%= link_to "#{t '.edit'}", edit_pumpkin_path(@pumpkin) %> |
+<%= link_to "#{t '.back'}", pumpkins_path %>
+
+
+
+<h1><%=t '.comments'%></h1>
+
+<table>
+  <thead>
+    <tr>
+      <th><%=t '.title'%></th>
+      <th><%=t '.content'%></th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @comments.each do |comment| %>
+      <tr>
+        <td><%= comment.title %></td>
+        <td><%= comment.content %></td>
+        <td><%= link_to"#{t '.show'}", comment %></td>
+        <td><%= link_to "#{t '.edit'}", edit_comment_path(comment) %></td>
+        <td><%= link_to "#{t '.delete'}", comment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
