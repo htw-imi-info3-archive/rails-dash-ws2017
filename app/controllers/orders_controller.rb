@@ -1,13 +1,14 @@
 class OrdersController < ApplicationController
-  before_action :set_order, only: [:show, :edit, :update, :destroy]
+  before_action :set_locale, :set_order, only: [:show, :edit, :update, :destroy]
 
   # GET /orders
   # GET /orders.json
   def index
-    @orders = Order.all
-    @order_customer_pairs = @orders.map { |o| [o, o.customer] }
-  end
 
+    @orders = Order.search(params[:term])
+  #  @order_customer_pairs = @orders.map { |o| [o, o.customer] }
+
+  end
   # GET /orders/1
   # GET /orders/1.json
   def show
@@ -20,8 +21,18 @@ class OrdersController < ApplicationController
   def new
     @order = Order.new
   end
+  #sets locale
+   def set_locale
+     I18n.locale = extract_locale_from_subdomain || I18n.locale = params[:locale] || I18n.default_locale
+   end
 
-  # GET /orders/1/edit
+   #extracts locale from possible subdomains
+   def extract_locale_from_subdomain
+       parsed_locale = request.subdomains.first
+    I18n.available_locales.map(&:to_s).include?(parsed_locale) ? parsed_locale : nil
+    end
+
+  # GET /orders/1/edits
   def edit
   end
 

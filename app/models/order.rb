@@ -4,6 +4,15 @@ class Order < ApplicationRecord
   has_many :pumpkins, through: :line_items
   # has_many(:pumpkins, {through: :line_items})
 
+  def self.search(term)
+    if term
+      where('customer_id LIKE ?', term)
+    else
+      all
+    end
+  end
+
+
   def total
     line_items.collect(&:price).inject(&:+).to_f
   end

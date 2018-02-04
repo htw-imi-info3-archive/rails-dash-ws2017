@@ -2,6 +2,11 @@
 
 <h1>Orders</h1>
 
+<%= form_tag orders_path, :method => 'get' do %>
+  <%= text_field_tag :term, params[:term] %>
+  <%= submit_tag 'Search' %>
+<% end %>
+
 <table>
   <thead>
     <tr>
@@ -11,17 +16,22 @@
   </thead>
 
   <tbody>
-    <% @order_customer_pairs.each do | order, customer | %>
-      <tr>
-        <td><%= customer.name %></td>
-        <td><%= link_to 'Show', order %></td>
-        <td><%= link_to 'Edit', edit_order_path(order) %></td>
-        <td><%= link_to 'Destroy', order, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
+    <% @orders.each do | order | %>
+        <tr>
+          <td><%= order %></td>
+
+          <td><%= link_to 'Show', order %></td>
+          <td><%= link_to 'Edit', edit_order_path(order) %></td>
+          <td><%= link_to 'Destroy', order, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+
+    </tbody>
+
+
 </table>
 
 <br>
 
+<br>
 <%= link_to 'New Order', new_order_path %>
