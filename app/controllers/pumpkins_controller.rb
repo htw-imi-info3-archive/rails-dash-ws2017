@@ -5,8 +5,10 @@ class PumpkinsController < ApplicationController
   # GET /pumpkins.json
   def index
     @pumpkins = Pumpkin.all
-      if params["pumpkinName"] 
-          Pumpkin.all.searchPumpkin(params["pumpkinName"])
+      if params[:carvedOrNot] 
+          @pumpkins = Pumpkin.searchForCarved(params[:carvedOrNot])
+        else
+          @pumpkins = Pumpkin.all
     end
       
         @show = t '.show'
