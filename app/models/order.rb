@@ -6,11 +6,12 @@ class Order < ApplicationRecord
 
   def self.search(term)
     if term
-      where('customer_id LIKE ?', "%#{term}%")
+      where('customer_id LIKE ?', term)
     else
       all
     end
   end
+
 
   def total
     line_items.collect(&:price).inject(&:+).to_f

@@ -2,9 +2,9 @@
 
 <h1>Orders</h1>
 
-<%= form_tag(orders_path, method: :get) do %>
+<%= form_tag orders_path, :method => 'get' do %>
   <%= text_field_tag :term, params[:term] %>
-  <%= submit_tag 'Search', name: nil %>
+  <%= submit_tag 'Search' %>
 <% end %>
 
 <table>
@@ -16,19 +16,19 @@
   </thead>
 
   <tbody>
-  <% @order_customer_pairs.each do | order, customer | %>
-      <tr>
-        <td><%= customer.name %></td>
-        <td><%= link_to 'Show', order %></td>
-        <td><%= link_to 'Edit', edit_order_path(order) %></td>
-        <td><%= link_to 'Destroy', order, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
+    <% @orders.each do | order | %>
+        <tr>
+          <td><%= order %></td>
+
+          <td><%= link_to 'Show', order %></td>
+          <td><%= link_to 'Edit', edit_order_path(order) %></td>
+          <td><%= link_to 'Destroy', order, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+
+      </tbody>
   </tbody>
 
-    <p><% @orders.each do | order | %></p>
-    <p><%= order %></p>
-    <% end %>
 </table>
 
 <br>
