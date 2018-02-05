@@ -3,10 +3,11 @@ Rails.application.routes.draw do
   scope '(:locale)' do
     resources :orders
     resources :customers
-    resources :pumpkins
+    resources :pumpkins 
     root to: 'startpage#welcome'
     # For details on the DSL available
     # within this file,
     # see http://guides.rubyonrails.org/routing.html
   end
+    get '/comments/:id', to: "comments#button", as: "button"
 end
