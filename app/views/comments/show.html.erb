@@ -15,5 +15,12 @@
   <%= @comment.pumpkin %>
 </p>
 
+<p>
+  <strong>Likes:</strong>
+  <%= @comment.likes %>
+</p>
+
+<%= link_to 'Add like', button_path %>
+
 <%= link_to 'Edit', edit_comment_path(@comment) %> |
 <%= link_to 'Back', comments_path %>
