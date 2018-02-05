@@ -9,10 +9,19 @@
   </head>
 
   <body>
-    <h1><%= t '.app_name' %></h1>
+    <h1><%= link_to (t('.app_name')), root_path %></h1>
 
-    <%= link_to '[EN]', locale: 'en' %>
-    <%= link_to '[DE]', locale: 'de' %>
+	<nav>
+		<% I18n.available_locales.each do |l| %>
+			<%= link_to "[#{l.upcase}]", locale: l %>
+		<% end %>
+		<br>
+		<%= link_to 'Pumpkins', pumpkins_path %></li>
+		<%= link_to 'Orders', orders_path %></li>
+		<%= link_to 'Customers', customers_path %></li>
+	</nav>
+
     <%= yield %>
+	
   </body>
 </html>
