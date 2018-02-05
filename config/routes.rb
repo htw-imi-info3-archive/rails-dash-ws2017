@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :comments
+    resources :comments
   scope '(:locale)' do
     resources :orders
     resources :customers

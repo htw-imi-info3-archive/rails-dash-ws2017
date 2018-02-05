@@ -4,7 +4,7 @@ class PumpkinsController < ApplicationController
   # GET /pumpkins
   # GET /pumpkins.json
   def index
-    @pumpkins = Pumpkin.all
+    @pumpkins = Pumpkin.order(weight: :asc)
       if params["pumpkinName"] 
           Pumpkin.all.searchPumpkin(params["pumpkinName"])
     end
