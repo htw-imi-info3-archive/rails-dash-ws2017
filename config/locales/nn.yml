@@ -1,0 +1,19 @@
+nn:
+  hello: "Hei verden"
+  layouts:
+    application:
+      app_name: "Min HTW applikasjon"
+  pumpkins:
+    index:
+      pumpkins: "Gresskar"
+      species: "Art"
+      carved: "Pyntet"
+      size: "Størrelse"
+      weight: "Vekt"
+      price: "Pris"
+      show: "Vis"
+      edit: "Rediger"
+      delete: "Slett"
+      new: "Ny gresskar"
+      search: "Søk"
+      search_for: "Søk etter"
