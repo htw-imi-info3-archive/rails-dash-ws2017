@@ -38,8 +38,7 @@ locale: <%= params[:locale] %>
 <%= link_to @new, new_pumpkin_path %>
 
 
-<%= form_tag("/pumpkins", method: "get") do %>
-  <%= label_tag(:pumpkinName, @search_for) %>
-  <%= text_field_tag(:pumpkinName) %>
+<%= form_tag(pumpkins_path, method: "get") do %>
+  <%= text_field_tag :carvedOrNot , params[:carvedOrNot], placeholder: "Carved true or false?"  %>
   <%= submit_tag(t '.search') %>
 <% end %>

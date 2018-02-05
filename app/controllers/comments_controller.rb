@@ -16,6 +16,10 @@ class CommentsController < ApplicationController
   def new
     @comment = Comment.new
   end
+    
+    def button
+        @comment = Comment.addLike
+    end
 
   # GET /comments/1/edit
   def edit
