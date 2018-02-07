@@ -17,3 +17,19 @@ de:
       new: Neuer Kürbis
       search: Suchen
       search_for: Suche nach
+      
+    show:
+      pumpkins: Kürbisse
+      species: Spezies
+      carved: Verziert
+      size: Größe
+      weight: Gewicht
+      price: Preis
+      show: Anzeigen
+      edit: Bearbeiten
+      delete: Löschen
+      title: Titel
+      content: Inhalt
+      comments: Kommentare
+      back: Zurück
+      search_for: Suche nach

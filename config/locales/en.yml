@@ -18,3 +18,19 @@ en:
       search: Search
       search_for: Search for
 
+
+    show:
+      pumpkins: Pumpkins
+      species: Species
+      carved: Carved
+      size: Size
+      weight: Weight
+      price: Price
+      show: Show
+      edit: Edit
+      delete: Delete
+      title: Title
+      content: Content
+      comments: Comments
+      back: Back
+

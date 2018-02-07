@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Species:</strong>
+  <strong><%=t '.species'%></strong>
   <%= @pumpkin.species %>
 </p>
 
@@ -14,32 +14,43 @@
 </p>
 
 <p>
-  <strong>Size:</strong>
+  <strong><%=t '.size'%></strong>
+  
   <%= @pumpkin.size %>
 </p>
 
 <p>
-  <strong>Weight:</strong>
+
+  <strong><%=t '.weight'%></strong>
+
   <%= @pumpkin.weight %>
 </p>
 
 <p>
-  <strong>Price:</strong>
+  <strong><%=t '.price'%></strong>
   <%= @pumpkin.price %>
 </p>
 
-<%= link_to 'Edit', edit_pumpkin_path(@pumpkin) %> |
-<%= link_to 'Back', pumpkins_path %>
+<%= link_to "#{t '.edit'}", edit_pumpkin_path(@pumpkin) %> |
+<%= link_to "#{t '.back'}", pumpkins_path %>
 
 
 
-<h1>Comments</h1>
+<h1><%=t '.comments'%></h1>
+
+
+
+
+
 
 <table>
   <thead>
     <tr>
-      <th>Title</th>
-      <th>Content</th>
+
+      <th><%=t '.title'%></th>
+      <th><%=t '.content'%></th>
+
+
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -49,9 +60,9 @@
       <tr>
         <td><%= comment.title %></td>
         <td><%= comment.content %></td>
-        <td><%= link_to 'Show', comment %></td>
-        <td><%= link_to 'Edit', edit_comment_path(comment) %></td>
-        <td><%= link_to 'Destroy', comment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to"#{t '.show'}", comment %></td>
+        <td><%= link_to "#{t '.edit'}", edit_comment_path(comment) %></td>
+        <td><%= link_to "#{t '.delete'}", comment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>

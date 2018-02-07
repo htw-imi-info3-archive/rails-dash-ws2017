@@ -7,7 +7,13 @@ class PumpkinsController < ApplicationController
     @pumpkins = Pumpkin.all
       if params["pumpkinName"] 
           Pumpkin.all.searchPumpkin(params["pumpkinName"])
+          
+     
     end
+      
+     
+      
+
       
         @show = t '.show'
         @edit = t '.edit'
@@ -27,6 +33,9 @@ class PumpkinsController < ApplicationController
         flash[:search] = t 'search'
         flash[:search_for] = t 'search_for'
       
+
+        @pumpkins=@pumpkins.order(:species)
+
       
   end
 

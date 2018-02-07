@@ -17,6 +17,10 @@ locale: <%= params[:locale] %>
 
   <tbody>
       
+<<<<<<< HEAD
+      <% @pumpkins.sort_by{|e| e[:species]}%>
+=======
+>>>>>>> c45889e1786253eca09b3b9c135621eb95a117f2
     <% @pumpkins.each do |pumpkin| %>
       <tr>
         <td><%= link_to pumpkin.species, pumpkin %></td>
