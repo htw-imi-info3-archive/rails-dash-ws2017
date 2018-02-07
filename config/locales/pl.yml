@@ -1,0 +1,13 @@
+de:
+  hello: "Witaj, świecie"
+  layouts:
+    application:
+      app_name: Aplikacja HTW
+  pumpkins:
+    index:
+      pumpkins: dynie
+      i_species: rodzaj
+      i_carved: cięty
+      i_size: wzrost
+      i_weight: masa
+      i_price: cena
