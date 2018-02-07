@@ -3,6 +3,10 @@ en:
   layouts:
     application:
       app_name: My HTW Application
+      home: Home
+      customers: Customers
+      pumpkins: Pumpkins
+      orders: Orders
   pumpkins:
     index:
       pumpkins: Pumpkins

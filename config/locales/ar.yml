@@ -1,0 +1,12 @@
+ar:
+  hello: "السلام عليكم"
+  layouts:
+    application:
+      app_name: مرحبا على صفحتنا
+      home: الصفحة الرئيسية
+      customers: الزبون
+      pumpkins: القرع
+      orders: الطلبات السابقة
+  pumpkins:
+    index:
+      pumpkins: القرع

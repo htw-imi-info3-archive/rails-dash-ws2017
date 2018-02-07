@@ -3,6 +3,10 @@ de:
   layouts:
     application:
       app_name: Die HTW Anwendung
+      home: Startseite
+      customers: Kunden
+      pumpkins: Kürbisse
+      orders: Bestellungen
   pumpkins:
     index:
       pumpkins: Kürbisse
