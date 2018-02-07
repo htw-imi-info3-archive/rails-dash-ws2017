@@ -6,3 +6,12 @@ de:
   pumpkins:
     index:
       pumpkins: Kürbisse
+      search: Suchen
+      edit: Bearbeiten
+      destroy: Löschen
+      species: Art
+      carved: Geschnitzt
+      size: Größe
+      weight: Gewicht
+      price: Preis
+      new pumpkin: Neuer Kürbiss

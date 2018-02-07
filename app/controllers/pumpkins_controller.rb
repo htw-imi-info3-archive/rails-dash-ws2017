@@ -12,6 +12,12 @@ class PumpkinsController < ApplicationController
   def show
   end
 
+  def search
+        @pumpkin = pumpkin.search(params[:search])
+  end
+
+  end
+
   # GET /pumpkins/new
   def new
     @pumpkin = Pumpkin.new
