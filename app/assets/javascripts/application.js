@@ -13,3 +13,17 @@
 //= require rails-ujs
 //= require turbolinks
 //= require_tree .
+
+function changeTheme() {
+    let background = document.getElementById('app-container');
+    let table = document.getElementsByTagName('table')[0];
+    let headline = document.getElementsByTagName('h1')[0];
+    let themeButton = document.getElementById('js-theme-button');
+
+    document.getElementsByTagName('body')[0].style.backgroundColor = 'ainsboro';
+    background.style.backgroundColor = '#282828';
+    background.style.color = '#ffffff';
+    table.style.backgroundColor = '#76B900';
+    headline.style.color = '#76B900';
+
+}
