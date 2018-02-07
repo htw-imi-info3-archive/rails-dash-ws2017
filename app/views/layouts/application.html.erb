@@ -21,7 +21,18 @@
 		<%= link_to 'Customers', customers_path %></li>
 	</nav>
 
+    <%= link_to '[EN]', locale: 'en' %>
+    <%= link_to '[DE]', locale: 'de' %>
+    <%= link_to '[AR]', locale: 'ar' %>
+
+    <nav>
+      <%= link_to (t '.home'), root_path %>
+      <%= link_to (t '.pumpkins'), pumpkins_path %>
+      <%= link_to (t '.orders'), orders_path %>
+      <%= link_to (t '.customers'), customers_path %>
+    </nav>
+
     <%= yield %>
-	
+
   </body>
 </html>

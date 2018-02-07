@@ -1,0 +1,23 @@
+ar:
+  hello: "السلام عليكم"
+  layouts:
+    application:
+      app_name: مرحبا على صفحتنا
+      home: الصفحة الرئيسية
+      customers: الزبون
+      pumpkins: القرع
+      orders: الطلبات السابقة
+  pumpkins:
+    index:
+      pumpkins: القرع
+      species: Spezies
+      carved: Verziert
+      size: Größe
+      weight: Gewicht
+      price: Preis
+      show: Anzeigen
+      edit: Bearbeiten
+      delete: Löschen
+      new: Neuer Kürbis
+      search: Suchen
+      search_for: Suche nach
